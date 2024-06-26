@@ -29,34 +29,34 @@ document.querySelectorAll('header a').forEach(anchor => {
 });
 
 // Form validation
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+// document.getElementById('contact-form').addEventListener('submit', function(event) {
+//     event.preventDefault();
 
-    // Get form data
-    const formData = new FormData(this);
-    const formDataObject = {};
-    formData.forEach((value, key) => {
-        formDataObject[key] = value;
-    });
+//     // Get form data
+//     const formData = new FormData(this);
+//     const formDataObject = {};
+//     formData.forEach((value, key) => {
+//         formDataObject[key] = value;
+//     });
 
-    // Example: Send form data to server using fetch API
-    fetch('/submit', {
-        method: 'POST',
-        body: JSON.stringify(formDataObject),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        // Handle response, e.g., display success message
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        // Handle error, e.g., display error message
-    });
-});
+//     // Example: Send form data to server using fetch API
+//     fetch('/submit', {
+//         method: 'POST',
+//         body: JSON.stringify(formDataObject),
+//         headers: {
+//             'Content-Type': 'application/json'
+//         }
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(data);
+//         // Handle response, e.g., display success message
+//     })
+//     .catch(error => {
+//         console.error('Error:', error);
+//         // Handle error, e.g., display error message
+//     });
+// });
 
 
 // Highlight active navigation link based on scroll position
